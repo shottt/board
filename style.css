@@ -1,0 +1,613 @@
+@charset "UTF-8";
+body{
+  margin: 0;
+  padding: 0;
+  background-color: #e1e5e7;
+  color: #444;
+  line-height: 150%;
+}
+
+h1,h2,h3,h4,h5,h6,p{
+  margin: 0;
+  padding: 0;
+}
+ul{
+  list-style: none;
+}
+/*========================================
+  リンク
+========================================*/
+
+
+/*========================================
+  フォント
+========================================*/
+
+
+/*========================================
+  ヘッダー
+========================================*/
+header{
+  margin-bottom: 30px;
+  width: 100%;
+  height: 80px;
+  background: #8BD2FA;
+}
+header h1{
+  float: left;
+  margin: 0;
+  padding-left: 15px;
+  text-align: center;
+  font-size: 32px;
+  font-family: 'Montserrat', sans-serif;
+  line-height: 80px; /* headerの高さに揃えて上下中央揃え */
+}
+header h1 a{
+  color: #fff;
+  text-decoration: none;
+}
+/*========================================
+  ナビゲーション
+========================================*/
+#top-nav{
+  position: relative;
+  float: right;
+  width: 500px;
+  height: 90px;
+}
+nav a{
+  padding: 10px 15px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 14px;
+}
+nav a:hover{
+  text-decoration: underline;
+}
+#top-nav ul{
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  margin: 0;
+  width: 450px;
+  height: 80px;
+  list-style: none;
+  line-height: 80px;
+}
+#top-nav ul li{
+  float: right;
+}
+/*========================================
+  レイアウト
+========================================*/
+.site-width{
+  margin: 0 auto;
+  width: 980px;
+}
+#main{
+  float: left;
+  width: 980px;
+  min-height: 600px;
+}
+.page-1colum #main{
+  width: 100%;
+}
+.page-2colum #main{
+  width: 760px;
+}
+.page-logined #main{
+  box-sizing: border-box;
+  border: 5px solid #f1f1f1;
+}
+#contents {
+  overflow: hidden;
+  margin: 20px auto;
+}
+/* ページタイトル */
+.page-title{
+  margin-bottom: 50px;
+  padding-top: 20px;
+  text-align: center;
+  font-size: 32px;
+}
+/*========================================
+  サイドバー
+========================================*/
+#sidebar{
+  float: left;
+  box-sizing: border-box;
+  background: white;
+  min-height: 600px;
+  width: 200px;
+  padding: 15px;
+  margin-left: 20px;
+}
+#sidebar .title{
+  text-align: left;
+  font-size: 14px;
+}
+#sidebar .selectbox{
+  position: relative;
+}
+#sidebar select{
+  padding: 10px;
+  width: 100%;
+  border-color: #000;
+  border-radius: 0;
+  font-size: 14px;
+  -webkit-appearance: none;
+}
+.page-logined #sidebar{
+  margin: 0 0 0 20px;
+}
+.page-logined #sidebar > a{
+  display: block;
+  margin-bottom: 15px;
+}
+
+
+/*========================================
+  フッター
+========================================*/
+#footer{
+  padding: 15px;
+  width: 100%;
+  background:#8BD2FA; 
+  color: #f6f5f5;
+  text-align: center;
+  font-size: 12px;
+}
+
+footer a{
+  color: #f6f5f5;
+}
+/*========================================
+  ページネーション
+========================================*/
+.pagination{
+  position: relative;
+  overflow: hidden;
+  margin-top: 10px;
+}
+.pagination-list{
+  position: relative;
+  left: 50%;
+  float: left;
+  padding-left: 0;
+  list-style: none;
+}
+.pagination .list-item{
+  position: relative;
+  left: -50%;
+  float: left;
+  margin-right: 5px;
+}
+.pagination .list-item:last-child{
+  margin-right: 0;
+}
+.pagination .list-item a{
+  text-decoration: none;
+  font-family: 'Montserrat', 'sans-serif';
+  color: black;
+  background: #fff;
+  padding: 5px 10px;
+  display: block;
+}
+.pagination .list-item .active a{
+  background: #333;
+  color: white;
+}
+.pagination .list-item a:hover{
+  background: #333;
+  color: white;
+}
+
+
+/*========================================
+  検索エリア
+========================================*/
+.search-title {
+  overflow: hidden;
+  margin-bottom: 30px;
+  padding: 5px 10px;
+  height: 40px;
+  background: white;
+  line-height: 40px;
+}
+.search-left{
+  float: left;
+}
+.search-right{
+  float: right;
+}
+.search-title .total-num{
+  padding-right: 5px;
+  font-weight: bold;
+  font-size: 18px;
+}
+/*========================================
+  リスト
+========================================*/
+.panel-list {
+  overflow: hidden;
+  counter-reset: counter-name;
+  padding-left: 0;
+}
+.panel-cnt{
+  background: white;
+  height: 140px;
+  list-style: none;
+  margin-left: 0;
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+.panel-cnt::before{
+  counter-increment: counter-name;
+  content: counter(counter-name) ".";
+  position: absolute;
+  left: 0;
+}
+.panel-list .panel {
+  display: inline-block;
+  box-sizing: border-box;
+  margin-bottom: 15px;
+  padding-right: 15px;
+  width: 100%;
+  color: #333;
+  text-decoration: none;
+  line-height: 1.2em;
+  background: white;
+  height: 140px;
+  
+}
+
+a.panel:hover {
+  text-decoration: underline;
+}
+
+.panel-list .panel img {
+  width: 90px;
+  height: 90px;
+  float: left;
+
+}
+.panel-title {
+  padding: 10px;
+}
+.panel-image{
+  float: left;
+  padding: 10px;
+}
+.panel-text{
+  float: left;
+  padding: 10px;
+}
+.panel-comment{
+  padding-left: 10px;
+  font-size: 14px;
+  word-break: break-all;
+}
+.panel-category{
+  display: inline-block;
+  margin: 10px;
+  font-size: 12px;
+  position: absolute;
+  bottom: 10px;
+  padding: 5px 10px;
+  color: white;
+  background: #9b8d77;
+}
+.panel-title{
+  font-weight: bold;
+  font-size: 20px;
+}
+
+/*========================================
+  ボタン
+========================================*/
+.btn {
+  padding: 15px;
+  border-radius: 5px;
+  border: none;
+  box-shadow: 3px 3px 3px #b8b8b8;
+  transition: all 1s;
+}
+.btn:hover{
+  cursor: pointer;
+  transition: all 1s;
+  box-shadow: 3px 10px 20px #c8c8c8;
+  transform: translateY(-10px);
+}
+.btn.btn-mid{
+  max-width: 150px;
+}
+.btn-container{
+  overflow: hidden;
+}
+.btn-link{
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  background: #9b8d77;
+  padding: 0;
+}
+.btn-link a{
+  text-decoration: none;
+  color: #fff;
+  display: block;
+  padding: 15px;
+}
+/*========================================
+  フォーム
+========================================*/
+label{
+  display: block;
+}
+label.err input, label.err select{
+  background: #f7dcd9;
+}
+input[type="text"], input[type="password"], input[type="email"], .form select, textarea{
+  display: block;
+  box-sizing: border-box;
+  margin-bottom: 15px;
+  padding: 10px;
+  width: 100%;
+  min-height: 60px;
+  border: none;
+  background: #f6f5f5;
+  font-size: 18px;
+}
+input[type="checkbox"]{
+  width: 18px;
+  height: 18px;
+  background: #f6f5f5;
+  vertical-align: middle
+}
+input[type="submit"]{
+  margin: 15px 0;
+  padding: 15px 30px;
+  width: 100%;
+  border: none;
+  background: #9b8d77;
+  color: #fff;
+  font-size: 14px;
+}
+select:hover,
+input[type="submit"]:hover{
+  cursor: pointer;
+}
+.form-container{
+  margin: 0 auto;
+}
+
+.form{
+  margin: 0 auto;
+  padding: 30px;
+  width: 400px;
+  border: 5px solid #f1f1f1;
+}
+.form .label-require{
+  margin-left: 5px;
+  background: #fe8a8a;
+  font-size: 14px;
+  padding: 3px 5px;
+  color: white;
+  vertical-align: bottom;
+}
+.page-logined .form{
+  border: none;
+}
+.form .title{
+  margin-bottom: 40px;
+  text-align: center;
+}
+.form .area-msg{
+  padding: 0 0 15px 0;
+  color: red;
+}
+.form .btn{
+  float: right;
+}
+.form .area-drop{
+  width: 100%;
+  margin-bottom: 15px;
+  background: #f6f5f4;
+  color: #ccc;
+  text-align: center;
+  position: relative;
+  box-sizing: border-box;
+}
+.form .input-file{
+  opacity: 0;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+.reply-form .btn{
+  float: right;
+}
+/*========================================
+  タブメニュー
+========================================*/
+.tab_item{
+  display: none;
+}
+.is-active-item{
+  display: block;
+}
+.tab_menu a{
+  text-decoration: none;
+  display: inline-block;
+  color: inherit;
+}
+.tab_btn{
+  font-size: 24px;
+  padding: 5px;
+  background: #E0F2F7;
+  opacity: 0.5;
+}
+.is-active-btn{
+  opacity: 1.0;
+  color: #00BFFF;
+}
+.tab_item{
+  width: 760px;
+  padding: 5px;
+  color: #00BFFF;
+  background-color: #E0F2F7;
+}
+
+/*========================================
+  その他
+========================================*/
+.msg-slide{
+  position: fixed;
+  top: 0;
+  width:100%;
+  height:40px;
+  background: rgba(122,206,230,0.6);
+  text-align: center;
+  font-size:16px;
+  line-height: 40px;
+}
+.badge{
+  display: inline-block;
+  padding: 5px 10px;
+  color: white;
+  background: #9b8d77;
+  margin: 10px;
+  font-size: 16px;
+  vertical-align: middle;
+  position: relative;
+  top: -4px;
+}
+#main .title{
+  font-size: 28px;
+  padding: 10px 0;
+}
+
+/*お気に入りアイコン*/
+.icn-favorite{
+  float: right;
+  color: #aaa;
+  font-size: 28px;
+}
+.icn-favorite:hover{
+  cursor: pointer;
+}
+.icn-favorite.active{
+  float: right;
+  color: #fe8a8b;
+  font-size: 28px;
+}
+
+.board-img{
+  float: left;
+  padding: 20px;
+}
+.board-img img{
+  width: 200px;
+}
+ol{
+  padding-left: 25px;
+  list-style-type: decimal;
+}
+.board-body{
+  overflow: hidden;
+}
+.board-comment{
+  float: left;
+  width: 600px;
+  padding-top: 20px;
+}
+#reply-form textarea{
+  width: 100%;
+  height: 150px;
+}
+.board-container{
+  background: white;
+  border-bottom: double;
+  min-height: 300px;
+  position: relative;
+}
+.mylist{
+  margin-bottom: 20px;
+  display: block;
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: none;
+  height: 100px;
+  background: white;
+  color: #333;
+}
+.prof-img img{
+  width: 150px;
+  height: 150px;
+}
+.reply-list{
+  counter-reset: counter-name;
+  padding-left: 0;
+}
+.reply-cnt:before{
+  counter-increment: counter-name;
+  content: counter(counter-name) ".";
+  position: absolute;
+  left: 0;
+  color: black;
+}
+.reply-cnt{
+  background: white;
+  list-style: none;
+  margin-left: 0;
+  position: relative;
+  padding-left: 30px;
+  border-bottom: dotted;
+  min-height: 140px;
+  padding-top: 10px;
+}
+.reply-cnt p{
+  padding: 10px;
+}
+.username{
+  margin-right: 20px;
+}
+
+.catch-copy{
+  margin-bottom: 20px;
+  font-size: 24px;
+  background: white;
+  padding: 10px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+}
+.board-title{
+  font-size: 24px;
+  display: inline-block;
+}
+.head{
+  font-size: 28px;
+}
+#reply-form .area-msg{
+  padding: 0 0 15px 0;
+  color: red;
+}
+.my-contents{
+  background: white;
+}
+.prof-img{
+  text-align: center;
+}
+.username{
+  padding: 10px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+}
+.profile .title{
+  text-align: center;
+}
