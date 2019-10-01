@@ -135,7 +135,7 @@ EOT;
 
         <form action="" method="post" class="form">
           <p>ご指定のメールアドレスにお送りした【パスワード再発行認証】メール内にある「認証キー」をご入力ください。</p>
-          <div class="area-msg">
+          <div class="form__area-msg">
             <?php
             echo getErrMsg('common');
             ?>
@@ -144,7 +144,7 @@ EOT;
             認証キー
             <input type="text" name="token" value="<?php echo getFormData('token'); ?>">
           </label>
-          <div class="area-msg">
+          <div class="form__area-msg">
             <?php
               echo getErrMsg('token');
             ?>

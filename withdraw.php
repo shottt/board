@@ -64,13 +64,13 @@ debug('画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
   ?>
 
   <!-- メインコンテンツ -->
-  <div id="contents" class="site-widt">
+  <div id="contents" class="site-width">
     <!-- Main -->
     <section id="main">
       <div class="form-container">
         <form action="" method="post" class="form">
-          <h2 class="title">退会</h2>
-          <div class="area-msg">
+          <h2 class="form__title">退会</h2>
+          <div class="form__area-msg">
             <?php
               echo getErrMsg('common');
             ?>

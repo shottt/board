@@ -145,7 +145,7 @@ debug('画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
         <form action="" method="post" class="form" enctype="multipart/form-data" style="width:100%;box-sizing:border-box;">
           
-          <div class="area-msg">
+          <div class="form__area-msg">
             <?php
               echo getErrMsg('common');
             ?>
@@ -154,7 +154,7 @@ debug('画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
             タイトル<span class="label-require">必須</span>
             <input type="text" name="title" value="<?php echo getFormData('title'); ?>">
           </label>
-          <div class="area-msg">
+          <div class="form__area-msg">
             <?php
               echo getErrMsg('title');
             ?>
@@ -164,7 +164,7 @@ debug('画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
             <textarea name="comment" id="js-count" cols="30" rows="10" style="height:150px;"><?php echo getFormData('comment'); ?></textarea>
           </label>
           <p class="counter-text"><span id="js-count-view">0</span>/500文字</p>
-          <div class="area-msg">
+          <div class="form__area-msg">
             <?php
               echo getErrMsg('comment');
             ?>
@@ -182,7 +182,7 @@ debug('画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
               ?>
             </select>
           </label>
-          <div class="area-msg">
+          <div class="form__area-msg">
             <?php
               echo getErrMsg('category_id');
             ?>
@@ -194,7 +194,7 @@ debug('画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
             <img src="<?php echo getFormData('pic'); ?>" alt="" class="prev-img" style="<?php if(empty(getFormData('pic'))) echo 'display:none'; ?>">
             ドラッグ&ドロップ
           </label>
-          <div class="area-msg">
+          <div class="form__area-msg">
             <?php
               echo getErrMsg('pic');
             ?>

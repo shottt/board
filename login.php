@@ -115,8 +115,8 @@ debug('画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
       <div class="form-container">
         <form action="" method="post" class="form">
-          <h2 class="title">ログイン</h2>
-          <div class="area-msg">
+          <h2 class="form__title">ログイン</h2>
+          <div class="form__area-msg">
             <?php
               echo getErrMsg('common');
             ?>
@@ -125,7 +125,7 @@ debug('画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
             メールアドレス
             <input type="email" name="email" value="<?php if(!empty($_POST['email'])) echo $_POST['email']; ?>">
           </label>
-          <div class="area-msg">
+          <div class="form__area-msg">
             <?php
               echo getErrMsg('email');
             ?>
@@ -134,7 +134,7 @@ debug('画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
             パスワード
             <input type="password" name="pass" value="<?php if(!empty($_POST['pass'])) echo $_POST['pass']; ?>">
           </label>
-          <div class="area-msg">
+          <div class="form__area-msg">
             <?php
               echo getErrMsg('pass');
             ?>

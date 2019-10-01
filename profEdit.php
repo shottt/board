@@ -98,7 +98,7 @@ debug('画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
     <section id="main">
       <div class="form-container">
         <form action="" method="post" class="form" enctype="multipart/form-data">
-          <div class="area-msg">
+          <div class="form__area-msg">
             <?php
               if(!empty($err_msg['common'])) echo $err_msg['common'];
             ?>
@@ -107,7 +107,7 @@ debug('画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
             ニックネーム
             <input type="text" name="username" value="<?php echo getFormData('username'); ?>">
           </label>
-          <div class="area-msg">
+          <div class="form__area-msg">
             <?php
               if(!empty($err_msg['username'])) echo $err_msg['username'];
             ?>
@@ -116,7 +116,7 @@ debug('画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
             Email
             <input type="email" name="email" value="<?php echo getFormData('email'); ?>">
           </label>
-          <div class="area-msg">
+          <div class="form__area-msg">
             <?php
               if(!empty($err_msg['email'])) echo $err_msg['email'];
             ?>
@@ -128,7 +128,7 @@ debug('画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
             <img src="<?php echo getFormData('pic'); ?>" alt="" class="prev-img" style="<?php if(empty(getFormData('pic'))) echo 'display:none;' ?>">
             ドラッグ＆ドロップ
           </label>
-          <div class="area-msg">
+          <div class="form__area-msg">
             <?php
               if(!empty($err_msg['pic'])) echo $err_msg['pic'];
             ?>

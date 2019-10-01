@@ -120,7 +120,7 @@ EOT;
 
     <form action="" method="post" class="form">
       <p>ご指定のメールアドレス宛にパスワード再発行用のURLと認証キーをお送り致します。</p>
-      <div class="area-msg">
+      <div class="form__area-msg">
         <?php
           echo getErrMsg('common');
         ?>
@@ -129,7 +129,7 @@ EOT;
         Email
         <input type="email" name="email" value="<?php echo getFormData('email'); ?>">
       </label>
-      <div class="area-msg">
+      <div class="form__area-msg">
         <?php
           echo getErrMsg('email');
         ?>

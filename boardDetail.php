@@ -144,13 +144,13 @@ debug('画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
     <form action="" method="post" id="reply-form">
       <h2 style="font-size:16px; margin-bottom:10px;">コメント内容</h2>
-      <div class="area-msg">
+      <div class="form__area-msg">
         <?php
          echo getErrMsg('common');
         ?>
       </div>
       <textarea name="reply" placeholder="ここにコメントを入力してください(500文字以内)"></textarea>
-      <div class="area-msg">
+      <div class="form__area-msg">
         <?php
           echo getErrMsg('reply');
         ?>

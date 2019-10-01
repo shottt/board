@@ -106,8 +106,8 @@ if(!empty($_POST)){
       <div class="form-container">
 
       <form action="" method="post" class="form">
-        <h2 class="title">ユーザー登録</h2>
-        <div class="area-msg">
+        <h2 class="form__title">ユーザー登録</h2>
+        <div class="form__area-msg">
           <?php
             echo getErrMsg('common');
           ?>
@@ -116,7 +116,7 @@ if(!empty($_POST)){
           Email
           <input type="email" name="email" value="<?php if(!empty($_POST['email'])) echo $_POST['email']; ?>">
         </label>
-        <div class="area-msg">
+        <div class="form__area-msg">
           <?php
             echo getErrMsg('email');
           ?>
@@ -125,7 +125,7 @@ if(!empty($_POST)){
           パスワード <span style="font-size: 12px;">※英数字6文字以上</span>
           <input type="password" name="pass" value="<?php if(!empty($_POST['pass'])) echo $_POST['pass']; ?>">
         </label>
-        <div class="area-msg">
+        <div class="form__area-msg">
           <?php
             echo getErrMsg('pass');
           ?>
@@ -134,7 +134,7 @@ if(!empty($_POST)){
           パスワード（再入力）
           <input type="password" name="pass_re" value="<?php if(!empty($_POST['pass_re'])) echo $_POST['pass_re']; ?>">
         </label>
-        <div class="area-msg">
+        <div class="form__area-msg">
           <?php
             echo getErrMsg('pass_re');
           ?>

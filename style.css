@@ -27,13 +27,13 @@ ul{
 /*========================================
   ヘッダー
 ========================================*/
-header{
+.header{
   margin-bottom: 30px;
   width: 100%;
   height: 80px;
   background: #8BD2FA;
 }
-header h1{
+.header__title{
   float: left;
   margin: 0;
   padding-left: 15px;
@@ -42,30 +42,30 @@ header h1{
   font-family: 'Montserrat', sans-serif;
   line-height: 80px; /* headerの高さに揃えて上下中央揃え */
 }
-header h1 a{
+.header__link{
   color: #fff;
   text-decoration: none;
 }
 /*========================================
   ナビゲーション
 ========================================*/
-#top-nav{
+.nav{
   position: relative;
   float: right;
   width: 500px;
   height: 90px;
 }
-nav a{
+.nav__link{
   padding: 10px 15px;
   color: #fff;
   text-decoration: none;
   font-weight: bold;
   font-size: 14px;
 }
-nav a:hover{
+.nav__link:hover{
   text-decoration: underline;
 }
-#top-nav ul{
+.nav-list{
   position: absolute;
   top: 0;
   right: 0;
@@ -76,7 +76,7 @@ nav a:hover{
   list-style: none;
   line-height: 80px;
 }
-#top-nav ul li{
+.nav-list__item{
   float: right;
 }
 /*========================================
@@ -112,6 +112,18 @@ nav a:hover{
   text-align: center;
   font-size: 32px;
 }
+
+/*========================================
+  SPレイアウト
+========================================*/
+@media (max-width: 600px){
+  #main{
+    width: 100%;
+  }
+  #sidebar{
+    width: 100%;
+  }
+}
 /*========================================
   サイドバー
 ========================================*/
@@ -134,10 +146,13 @@ nav a:hover{
 #sidebar select{
   padding: 10px;
   width: 100%;
-  border-color: #000;
+  border-color: #ccc;
   border-radius: 0;
   font-size: 14px;
+  border-style: solid;
   -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
 .page-logined #sidebar{
   margin: 0 0 0 20px;
@@ -400,11 +415,11 @@ input[type="submit"]:hover{
 .page-logined .form{
   border: none;
 }
-.form .title{
+.form__title{
   margin-bottom: 40px;
   text-align: center;
 }
-.form .area-msg{
+.form__area-msg{
   padding: 0 0 15px 0;
   color: red;
 }
@@ -611,3 +626,4 @@ ol{
 .profile .title{
   text-align: center;
 }
+

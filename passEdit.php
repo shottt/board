@@ -131,7 +131,7 @@ EOT;
             古いパスワード
             <input type="password" name="pass_old" value="<?php echo getFormData('pass_old'); ?>">
           </label>
-          <div class="area-msg">
+          <div class="form__area-msg">
             <?php
             echo getErrMsg('pass_old');
             ?>
@@ -140,7 +140,7 @@ EOT;
             新しいパスワード
             <input type="password" name="pass_new" value="<?php echo getFormData('pass_new'); ?>">
           </label>
-          <div class="area-msg">
+          <div class="form__area-msg">
             <?php
               echo getErrMsg('pass_new');
             ?>
@@ -149,7 +149,7 @@ EOT;
             新しいパスワード（再入力）
             <input type="password" name="pass_new_re" value="<?php echo getFormData('pass_new_re'); ?>">
           </label>
-          <div class="area-msg">
+          <div class="form__area-msg">
             <?php
               echo getErrMsg('pass_new_re');
             ?>
