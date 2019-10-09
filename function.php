@@ -437,7 +437,7 @@ function getMyReplyAndBoard($u_id){
     // DBへ接続
     $dbh = dbConnect();
     // SQL文作成
-    $sql = 'SELECT b.id AS b_id, b.title AS b_title, r.board_id, r.reply_user_id, r.reply FROM board AS b LEFT JOIN reply AS r ON b.id = r.board_id WHERE r.reply_user_id = :id AND b.delete_flg = 0 AND r.delete_flg = 0';
+    $sql = 'SELECT b.id AS b_id, b.title AS b_title, r.board_id, r.reply_user_id, r.reply, b.pic, b.comment FROM board AS b LEFT JOIN reply AS r ON b.id = r.board_id WHERE r.reply_user_id = :id AND b.delete_flg = 0 AND r.delete_flg = 0';
     $data = array(':id' => $u_id);
     // クエリ実行
     $stmt = queryPost($dbh, $sql, $data);

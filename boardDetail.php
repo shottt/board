@@ -140,7 +140,7 @@ debug('画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
         
         <?php pagination($currentPageNum, $viewReplyData['total_page'], $b_id); ?>
 
-        <a style="margin: 20px 0; display: inline-block;" href="index.php<?php appendGetParam(array('b_id')); ?>">&lt; 掲示板一覧に戻る</a>
+        
 
     <form action="" method="post" id="reply-form">
       <h2 style="font-size:16px; margin-bottom:10px;">コメント内容</h2>
@@ -159,6 +159,7 @@ debug('画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
         <input type="submit" value="投稿する" class="btn btn-mid">
       </div>
     </form>
+    <a style="margin: 20px 0; display: inline-block;" href="index.php<?php appendGetParam(array('b_id')); ?>">&lt; 掲示板一覧に戻る</a>
     </section>
   </div>
 

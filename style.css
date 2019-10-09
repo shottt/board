@@ -2,9 +2,11 @@
 body{
   margin: 0;
   padding: 0;
-  background-color: #e1e5e7;
+  background-color: #EAEDF2;
   color: #444;
   line-height: 150%;
+  font-family: "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", sans-serif;
+  line-height: 1.7;
 }
 
 h1,h2,h3,h4,h5,h6,p{
@@ -15,23 +17,15 @@ ul{
   list-style: none;
 }
 /*========================================
-  リンク
-========================================*/
-
-
-/*========================================
-  フォント
-========================================*/
-
-
-/*========================================
   ヘッダー
 ========================================*/
 .header{
+  width: 100%;
   margin-bottom: 30px;
   width: 100%;
+  background: #000080;
   height: 80px;
-  background: #8BD2FA;
+  box-shadow: 3px 3px 3px #b8b8b8;
 }
 .header__title{
   float: left;
@@ -42,10 +36,15 @@ ul{
   font-family: 'Montserrat', sans-serif;
   line-height: 80px; /* headerの高さに揃えて上下中央揃え */
 }
+.header__sub-title{
+  color: white;
+  font-size: 16px;
+}
 .header__link{
   color: #fff;
   text-decoration: none;
 }
+
 /*========================================
   ナビゲーション
 ========================================*/
@@ -73,7 +72,6 @@ ul{
   margin: 0;
   width: 450px;
   height: 80px;
-  list-style: none;
   line-height: 80px;
 }
 .nav-list__item{
@@ -117,12 +115,14 @@ ul{
   SPレイアウト
 ========================================*/
 @media (max-width: 600px){
-  #main{
+  
+  .site-width{
     width: 100%;
   }
   #sidebar{
     width: 100%;
   }
+  
 }
 /*========================================
   サイドバー
@@ -135,6 +135,11 @@ ul{
   width: 200px;
   padding: 15px;
   margin-left: 20px;
+  box-shadow: 3px 3px 3px #b8b8b8;
+}
+.sidebar-title{
+  border-bottom: solid 1px black;
+  margin-bottom: 10px;
 }
 #sidebar .title{
   text-align: left;
@@ -169,7 +174,7 @@ ul{
 #footer{
   padding: 15px;
   width: 100%;
-  background:#8BD2FA; 
+  background: #000080; 
   color: #f6f5f5;
   text-align: center;
   font-size: 12px;
@@ -230,6 +235,7 @@ footer a{
   height: 40px;
   background: white;
   line-height: 40px;
+  box-shadow: 3px 3px 3px #b8b8b8;
 }
 .search-left{
   float: left;
@@ -258,12 +264,19 @@ footer a{
   position: relative;
   padding-left: 20px;
   margin-bottom: 20px;
+  box-shadow: 3px 3px 3px #b8b8b8;
+  transition: all 1s;
+}
+.panle-cnt:hover{
+  transition: all 1s;
+  transform: translateY(-5px);
 }
 .panel-cnt::before{
   counter-increment: counter-name;
   content: counter(counter-name) ".";
   position: absolute;
   left: 0;
+  color: black;
 }
 .panel-list .panel {
   display: inline-block;
@@ -276,7 +289,6 @@ footer a{
   line-height: 1.2em;
   background: white;
   height: 140px;
-  
 }
 
 a.panel:hover {
@@ -334,7 +346,7 @@ a.panel:hover {
   cursor: pointer;
   transition: all 1s;
   box-shadow: 3px 10px 20px #c8c8c8;
-  transform: translateY(-10px);
+  transform: translateY(-5px);
 }
 .btn.btn-mid{
   max-width: 150px;
@@ -397,7 +409,9 @@ input[type="submit"]:hover{
 .form-container{
   margin: 0 auto;
 }
-
+.page-1colum .form-container{
+  margin: 80px auto;
+}
 .form{
   margin: 0 auto;
   padding: 30px;
@@ -429,8 +443,10 @@ input[type="submit"]:hover{
 .form .area-drop{
   width: 100%;
   margin-bottom: 15px;
+  height: 140px;
   background: #f6f5f4;
   color: #ccc;
+  line-height: 150px;
   text-align: center;
   position: relative;
   box-sizing: border-box;
@@ -438,10 +454,17 @@ input[type="submit"]:hover{
 .form .input-file{
   opacity: 0;
   width: 100%;
+  height: 140px;
   position: absolute;
   top: 0;
   left: 0;
   z-index: 2;
+}
+.form .prev-img{
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 .reply-form .btn{
   float: right;
@@ -450,31 +473,32 @@ input[type="submit"]:hover{
   タブメニュー
 ========================================*/
 .tab_item{
+  width: 760px;
+  padding: 5px;
+  background-color: #EAEDF2;
   display: none;
 }
 .is-active-item{
   display: block;
 }
-.tab_menu a{
-  text-decoration: none;
-  display: inline-block;
-  color: inherit;
-}
 .tab_btn{
-  font-size: 24px;
+  font-size: 20px;
   padding: 5px;
-  background: #E0F2F7;
+  background: #333;
   opacity: 0.5;
+  display: inline-block;
+  cursor: pointer;
+  text-align: center;
+  width: 33%;
 }
 .is-active-btn{
   opacity: 1.0;
-  color: #00BFFF;
+  color: #fff;
 }
-.tab_item{
-  width: 760px;
-  padding: 5px;
-  color: #00BFFF;
-  background-color: #E0F2F7;
+.tab_menu{
+  background: #EAEDF2;
+  display: flex;
+  justify-content: space-between;
 }
 
 /*========================================
@@ -568,7 +592,7 @@ ol{
   counter-reset: counter-name;
   padding-left: 0;
 }
-.reply-cnt:before{
+.reply-cnt::before{
   counter-increment: counter-name;
   content: counter(counter-name) ".";
   position: absolute;
@@ -592,14 +616,6 @@ ol{
   margin-right: 20px;
 }
 
-.catch-copy{
-  margin-bottom: 20px;
-  font-size: 24px;
-  background: white;
-  padding: 10px;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: bold;
-}
 .board-title{
   font-size: 24px;
   display: inline-block;
@@ -616,6 +632,7 @@ ol{
 }
 .prof-img{
   text-align: center;
+  margin-top: 10px;
 }
 .username{
   padding: 10px;
@@ -623,7 +640,9 @@ ol{
   font-weight: bold;
   font-size: 20px;
 }
-.profile .title{
-  text-align: center;
+.profile{
+  box-sizing: border-box;
+  padding: 5px;
+  box-shadow: 3px 3px 3px #b8b8b8;
 }
 

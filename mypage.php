@@ -63,7 +63,6 @@ debug('取得したお気に入りの掲示板データ：' .print_r($favoriteDa
     <!-- Main -->
     <section id="main" class="my-contents">
       <div class="profile">
-        <h2 class="title"　 style="margin-bottom:15px">プロフィール</h2>
         <div class="prof-img">
           <img src="<?php echo (showImg($userData['pic'])); ?>" alt="">
         </div>
@@ -74,54 +73,76 @@ debug('取得したお気に入りの掲示板データ：' .print_r($favoriteDa
         </div>
       </div>
 
-      <div class="tab_menu">
-        <a class="tab_btn is-active-btn" href="#item1">作成掲示板一覧</a>
-        <a class="tab_btn" href="#item2">コメント掲示板一覧</a>
-        <a class="tab_btn" href="#item3">お気に入り一覧</a>
-      </div>
-
-      <div class="tab_item is-active-item" id="item1">
-        <?php
-          if(!empty($boardData)):
-            foreach($boardData as $key => $val):
-        ?>
-            <a href="boardDetail.php<?php echo (!empty(appendGetParam())) ? appendGetParam() . '&b_id=' .$val['id'] : '?b_id=' .$val['id']; ?>" class="mylist">
-              <?php echo sanitize($val['title']); ?>
+      <ul class="tab_menu">
+        <li class="tab_btn is-active-btn">作成した掲示板一覧</li>
+        <li class="tab_btn">コメントした掲示板一覧</li>
+        <li class="tab_btn">お気に入り一覧</li>
+      </ul>
+        <ol class="panel-list tab_item is-active-item">
+          <?php
+            if(!empty($boardData)) :
+              foreach($boardData as $key => $val):
+          ?>
+          <li class="panel-cnt">
+            <a href="boardDetail.php<?php echo (!empty(appendGetParam())) ? appendGetParam(). '&b_id='.$val['id'] : '?b_id='.$val['id']; ?>" class="panel">
+              <div class="panel-image">
+                <img src="<?php echo showImg(sanitize($val['pic'])); ?>" alt="<?php echo sanitize($val['title']); ?>" ?>
+              </div>
+              <div class="panel-text">
+                <p class="panel-title"><?php echo sanitize($val['title']); ?></p>
+                <p class="panel-comment"><?php echo mb_substr(sanitize($val['comment']),0,40); ?></p>
+              </div>
             </a>
+          </li>
+          <?php
+              endforeach;
+            endif;
+          ?>
+        </ol>
+        <ol class="panel-list tab_item">
+          <?php
+            if(!empty($replyBoardData)) :
+              foreach($replyBoardData as $key => $val):
+          ?>
+          <li class="panel-cnt">
+            <a href="boardDetail.php<?php echo (!empty(appendGetParam())) ? appendGetParam(). '&b_id='.$val['b_id'] : '?b_id='.$val['b_id']; ?>" class="panel">
+              <div class="panel-image">
+                <img src="<?php echo showImg(sanitize($val['pic'])); ?>" alt="<?php echo sanitize($val['title']); ?>" ?>
+              </div>
+              <div class="panel-text">
+                <p class="panel-title"><?php echo sanitize($val['b_title']); ?></p>
+                <p class="panel-comment"><?php echo mb_substr(sanitize($val['comment']),0,40); ?></p>
+              </div>
+            </a>
+          </li>
+          <?php
+              endforeach;
+            endif;
+          ?>
+        </ol>
         
-        <?php
-            endforeach;
-          endif;
-        ?>
-      </div>
-
-      <div class="tab_item" id="item2">
-        <?php
-          if(!empty($replyBoardData)):
-            foreach($replyBoardData as $key => $val):
-        ?>
-            <a href="boardDetail.php<?php echo (!empty(appendGetParam())) ? appendGetParam() . '&b_id=' .$val['b_id'] : '?b_id=' .$val['b_id']; ?>" class="mylist">
-              <?php echo sanitize($val['b_title']); ?>
-           </a>
-
-        <?php
-            endforeach;
-          endif;
-        ?>
-      </div>
-
-      <div class="tab_item" id="item3">
-        <?php
-          if(!empty($favoriteData)):
-            foreach($favoriteData as $key => $val):
-        ?>
-            <a href="boardDetail.php<?php echo (!empty(!appendGetParam())) ? appendGetParam() . '&b_id=' .$val['b_id'] : '?b_id=' .$val['b_id']; ?>" class="mylist"><?php echo sanitize($val['title']); ?></a>
-        <?php
-            endforeach;
-          endif;
-        ?>
-
-      </div>
+        <ol class="panel-list tab_item">
+          <?php
+            if(!empty($favoriteData)) :
+              foreach($favoriteData as $key => $val):
+          ?>
+          <li class="panel-cnt">
+            <a href="boardDetail.php<?php echo (!empty(appendGetParam())) ? appendGetParam(). '&b_id='.$val['board_id'] : '?b_id='.$val['board_id']; ?>" class="panel">
+              <div class="panel-image">
+                <img src="<?php echo showImg(sanitize($val['pic'])); ?>" alt="<?php echo sanitize($val['title']); ?>" ?>
+              </div>
+              <div class="panel-text">
+                <p class="panel-title"><?php echo sanitize($val['title']); ?></p>
+                <p class="panel-comment"><?php echo mb_substr(sanitize($val['comment']),0,40); ?></p>
+              </div>
+            </a>
+          </li>
+          <?php
+              endforeach;
+            endif;
+          ?>
+        </ol>
+      <!-- </div> -->
     </section>
 
     <!-- サイドバー -->

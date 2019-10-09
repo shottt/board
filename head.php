@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="style.css">
   <!-- フォントアイコン -->
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
-  <title>パパちゃんねる | <?= $siteTitle ?></title>
+  <title>Daddy Cannel | <?= $siteTitle ?></title>
 </head>
 
   

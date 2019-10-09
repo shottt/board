@@ -1,5 +1,5 @@
 <footer id="footer">
-  Copyright <a href="">Daddy Board</a>. All Rights Reserverd.
+  Copyright <a href="">Daddy Cannel</a>. All Rights Reserverd.
 </footer>
 
 <script src="jquery-3.4.1.min.js"></script>
@@ -38,7 +38,7 @@
   $fileInput.on('change', function(e){
     $dropArea.css('border', 'none');
     var file = this.files[0], // 登録されたFileListオブジェクトを取得して変数に格納
-    $img = $(this).siblings('prev-img'), // jQueryのsiblingメソッドで兄弟要素のimgを取得
+    $img = $(this).siblings('.prev-img'), // jQueryのsiblingメソッドで兄弟要素のimgを取得
     fileReader = new FileReader(); // ファイルを読み込むFileReaderオブジェクト
 
     // 読み込みが完了した際のイベントハンドラ。imgをsrcにデータをセット
@@ -82,14 +82,14 @@
 
   // タブメニュー
   $('.tab_btn').on('click', function(){
-    // is-active-itemを外す
-    $('.tab_item').removeClass('is-active-item');
-    // クリックしたtab_btnに対応するtab_itemにis-active-itemをつける
-    $($(this).attr("href")).addClass('is-active-item');
-
     $('.tab_btn').removeClass('is-active-btn');
     $(this).addClass('is-active-btn');
-  })
+    $('.tab_item').removeClass('is-active-item');
+    // クリックしたタブからインデックス番号を取得
+    var index = $(this).index();
+    // クリックしたタブと同じインデックス番号を持つコンテンツを表示
+    $('.tab_item').eq(index).addClass('is-active-item');
+  });
 });
 </script>
 

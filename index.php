@@ -55,7 +55,7 @@ debug('画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
     <!-- メインコンテンツ -->
     <div id="contents" class="site-width">
-    <p class="catch-copy">パパ同士でいろいろ雑談しよう</p>
+
       <!-- Main -->
       <section id="main">
         <div class="search-title">
@@ -92,6 +92,7 @@ debug('画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
       </section>
 
       <section id="sidebar">
+        <h2 class="sidebar-title">検索エリア</h2>
         <form action="" name="" method="get">
           <h1 class="title">カテゴリー</h1>
           <div class="selectbox">
