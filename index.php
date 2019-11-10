@@ -92,7 +92,7 @@ debug('画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
       </section>
 
       <section id="sidebar">
-        <h2 class="sidebar-title">検索エリア</h2>
+        <h2 class="sidebar-title">検索する</h2>
         <form action="" name="" method="get">
           <h1 class="title">カテゴリー</h1>
           <div class="selectbox">
