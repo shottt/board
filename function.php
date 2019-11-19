@@ -477,6 +477,11 @@ function isFavorite($u_id, $b_id){
   debug('お気に入り情報があるかどうか確認します。');
   debug('ユーザーID：' .$u_id);
   debug('掲示板ID：' .$b_id);
+  // ユーザーIDが空だったら、falseを返す
+  if(empty($u_id) && $u_id != 0){
+    return false;
+  }
+
   // 例外処理
   try{
     // DBへ接続

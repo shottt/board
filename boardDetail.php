@@ -19,6 +19,8 @@ debugLogStart();
 $b_id = (!empty($_GET['b_id'])) ? $_GET['b_id'] : '';
 // DBから掲示板データを取得
 $viewBoardData = getBoardOne($b_id);
+// ユーザーIDを変数に格納（ログインしていない場合は空文字にする）
+$user_id  = (!empty($_SESSION['user_id'])) ? $_SESSION['user_id'] : '';
 // パラメータに不正な値が入っているかチェック
 if(empty($viewBoardData)){
   error_log('エラー発生：指定ページに不正な値が入りました。');
@@ -110,7 +112,7 @@ debug('画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
         <div class="head">
           <span class="badge"><?php echo sanitize($viewBoardData['category']); ?></span>
           <h2 class="board-title"><?php echo sanitize($viewBoardData['title']); ?></h2>
-          <i class="fa fa-heart icn-favorite js-click-favorite <?php if(isFavorite($_SESSION['user_id'], $viewBoardData['id'])){ echo 'active'; } ?>" aria-hidden="true" data-boardid="<?php echo sanitize($viewBoardData['id']); ?>" ></i>
+          <i class="fa fa-heart icn-favorite js-click-favorite <?php if(isFavorite($user_id, $viewBoardData['id'])){ echo 'active'; } ?>" aria-hidden="true" data-boardid="<?php echo sanitize($viewBoardData['id']); ?>" ></i>
         </div>
         <div class="board-body">
           <div class="board-img">
