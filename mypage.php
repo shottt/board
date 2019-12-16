@@ -107,7 +107,7 @@ debug('取得したお気に入りの掲示板データ：' .print_r($favoriteDa
           <li class="panel-cnt">
             <a href="boardDetail.php<?php echo (!empty(appendGetParam())) ? appendGetParam(). '&b_id='.$val['b_id'] : '?b_id='.$val['b_id']; ?>" class="panel">
               <div class="panel-image">
-                <img src="<?php echo showImg(sanitize($val['pic'])); ?>" alt="<?php echo sanitize($val['title']); ?>" ?>
+                <img src="<?php echo showImg(sanitize($val['pic'])); ?>" alt="<?php echo sanitize($val['b_title']); ?>" ?>
               </div>
               <div class="panel-text">
                 <p class="panel-title"><?php echo sanitize($val['b_title']); ?></p>

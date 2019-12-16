@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="style.css">
   <!-- フォントアイコン -->
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
-  <title>Daddy Cannel | <?= $siteTitle ?></title>
+  <title>Daddy Channel | <?= $siteTitle ?></title>
 </head>
 
   

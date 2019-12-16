@@ -1,7 +1,7 @@
 <header class="header">
   <h1 class="header__title">
     <a href="index.php" class="header__link">
-      Daddy Cannel<span class="header__sub-title">　〜パパのための雑談サイト〜</span>
+      Daddy Channel<span class="header__sub-title">　〜パパのための雑談サイト〜</span>
     </a>
   </h1>
   <nav class="nav">
