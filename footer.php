@@ -1,5 +1,5 @@
 <footer id="footer">
-  Copyright <a href="">Daddy Cannel</a>. All Rights Reserverd.
+  <p>&copy; <a href="index.php">パパチャンネル</a>. All Rights Reserverd.</p>
 </footer>
 
 <script src="jquery-3.4.1.min.js"></script>
