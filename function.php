@@ -12,7 +12,7 @@ ini_set('error_log', 'php.log');
 // デバッグ
 //================================
 // デバッグフラグ(アップロード時はfalseに変更)
-$debug_flg = true;
+$debug_flg = false;
 // デバッグログ関数
 function debug($str){
   global $debug_flg;
